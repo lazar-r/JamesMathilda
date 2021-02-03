@@ -1,0 +1,2 @@
+const navSlide=()=>{const e=document.querySelector(".burger"),n=document.querySelector(".nav-links"),a=document.querySelectorAll(".nav-links li");e.addEventListener("click",(()=>{n.classList.toggle("nav-active"),a.forEach(((e,n)=>{e.style.animation?e.style.animation="":e.style.animation=`navLinkFade 0.4s ease forwards ${n/4+.2}s`}))}))};navSlide();
+//# sourceMappingURL=script.js.map
