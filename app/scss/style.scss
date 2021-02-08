@@ -245,9 +245,9 @@ i {
     }
     div.about {
         flex-direction: column;
-        height: 70vh;
-        .about-img {
-            margin-bottom: 2em;
+        height: 120vh;
+        .about-img, .about-text {
+            flex-basis: auto;
         }
     }
 }
@@ -379,9 +379,28 @@ i {
         padding: 1em;
     }
     div.about {
-        height: 100vh;
+        height: 130vh;
+        justify-content: space-around;
+        div.about-img, .about-text {
+            flex-basis: auto;
+        }
     }
-}
+    div.services {
+        padding: 1em 2em;
+    }
+    div.contact {
+        padding: 5em;
+    }
+    div.email.input, #email, #name, #msg, .msg input {
+        margin-bottom: 1em;
+        padding: .5em;
+        border: none;
+        border-bottom: 2px solid $white;
+        background-color: $lightgreen;
+        width: 15em;
+    }
+
+ }
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -606,12 +625,12 @@ i {
             width: 25em;
 
         }
-        .msg, #msg {
+        .msg {
             width: 35em;
         }
         input.button, #button {
             background-color: transparent;
-            width: 50%;
+            width: 60%;
             text-align: center;
             display: inline-block;
             margin-top: 4em;
