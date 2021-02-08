@@ -229,12 +229,64 @@ i {
     div .hero-p {
         line-height: 1.5em;
     }
+    .form {
+        flex-direction: column;
+        align-self: center; 
+        div.email {
+            padding: 4em 0;
+            margin: 1em 0;
+            order: 1;
+            align-self: flex-start;
+        }
+        div.call {
+            order: 2;
+            align-self: flex-start;
+        }
+    }
+    div.about {
+        flex-direction: column;
+        height: 70vh;
+        .about-img {
+            margin-bottom: 2em;
+        }
+    }
 }
 @media screen and (max-width: 820px) {
     div.hero-p{
         white-space: normal;
     }
-
+    div.about {
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+        padding: 1em 5em;
+        .about-img {
+            padding-bottom: 0;
+        }
+        div.about-text{
+            align-items: center;
+            p {
+                text-align: center;
+            }
+        }
+    }
+    div.about-btn {
+        flex-direction: column;
+    }
+    div.footer {
+        height: 30vh;
+        a, p {
+            padding-bottom: 1em;
+        }
+    }
+    .left,.right{
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        span {
+            display: none;
+        }
+    }
 }
 @media screen and (max-width: 768px){
     .nav-gap {
@@ -282,8 +334,20 @@ i {
             border-bottom: 1px solid rgba($color: #ffffff, $alpha: 0.3);
         }
     }
-
-
+    div.contact {
+        padding: 8em;
+        justify-content: center;
+        align-items: center; 
+    }
+    .button img {
+        display: none;
+    }
+    div.about {
+        height: 100vh;
+    }
+    div.about-btn {
+        flex-direction: column;
+    }
 }
 
 @media screen and (max-width: 659px){
@@ -311,10 +375,11 @@ i {
         font-size: 2em;
         white-space: nowrap;
     }
-}
-@media screen and (max-width: 659px) {
     div.hero-container {
         padding: 1em;
+    }
+    div.about {
+        height: 100vh;
     }
 }
 .hero-container {
@@ -374,7 +439,7 @@ i {
     img {
         padding-bottom: 1em;
     }
-    button {
+    button, .button {
         background-color: transparent;
         display: inline-block;
         margin-top: 2em;
@@ -471,6 +536,194 @@ i {
                 cursor: pointer;
             } 
         }
+        div.about {
+            height: 100vh;
+        }
+    }
+}
+.contact {
+    background-color: $lightgreen;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: flex-start;
+    padding: 1em 15em;
+    .head {
+        align-self: center;
+        text-align: center;
+    }
+    h1 {
+        text-align: center;
+        padding: .5em;
+    }
+    .form {
+        display: flex;
+        justify-content: space-around;
+        align-items: flex-start;
+        padding-top: 2em;
+        margin: 4em 0;
+    }
+    .call, .email {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        h3 {
+            color: $yellow;
+            font-size: 1.35em;
+            font-weight: 700;
+            padding-bottom: 2.5em;
+            img {
+                padding-right: .5em;
+            }
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+    }
+    .email {
+        margin-left: 6em;
+        label {
+            padding-top: .5em;
+            margin-left: 1em;
+        }
+        input {
+            border: none;
+            background-color: transparent;
+            color: $yellow;
+                &:focus {
+                    background-color: $beige;
+                    border: none;
+            }
+        }
+        .input {
+            margin-bottom: 1em;
+            padding: .5em;
+            border: none;
+            border-bottom: 2px solid $white;
+            background-color: $lightgreen;
+            width: 25em;
+
+        }
+        .msg, #msg {
+            width: 35em;
+        }
+        input.button, #button {
+            background-color: transparent;
+            width: 50%;
+            text-align: center;
+            display: inline-block;
+            margin-top: 4em;
+            padding: 1em;
+            border: 4px solid $yellow;
+            border-radius: .7em;
+            color: $yellow;
+            font-size: 0.76em;
+            font-weight: 600;
+            img {
+                padding-left: .5em;
+            }
+            cursor: pointer;
+                &:hover {
+                background-color: $yellow;
+                input, img {
+                    color: $darkgray1;
+                    cursor: pointer;
+                }
+        }
+        }
+    }
+}
+.about {
+    height: 60vh;
+    padding: 0 10em;
+    padding-bottom: 4em;
+    display: flex;
+    justify-content: space-between;
+    background-image: linear-gradient(rgba(196, 197, 199, 0.027), rgba(142, 143, 145, 0.001)), url(/img/about-us-background.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    .about-img {
+        flex-basis: 40%;
+        padding-top: 5em;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        img {
+            padding-bottom: 1.5em;
+            height: 80px;
+            width: 90px;
+        }
+        h1 {
+            font-size: 2.64em;
+            font-weight: 400;
+        }
+    }
+    .about-text {
+        flex-basis: 60%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        .about-btn {
+            display: flex;
+            justify-content: space-between;
+            padding-top: 4em;
+            p {
+                padding-bottom: 2em;
+            }
+            button {
+                background-color: transparent;
+                cursor: pointer;
+                text-align: center;
+                display: inline-block;
+                margin-top: 4em;
+                padding: 1em 2em;
+                border: 4px solid $yellow;
+                border-radius: .7em;
+                color: $yellow;
+                font-size: 0.76em;
+                font-weight: 600;
+                i {
+                    padding-left: 1em;
+                }
+                &:hover {
+                    background-color: $yellow;
+                    color: $darkgray1;
+                }
+            }
+        }
+    }
+}
+.footer {
+    height: 10vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: $darkgray1;
+    font-size: 0.76em;
+    font-weight: 600;
+    a, p {
+        padding: 0 1em;
+    }
+    a {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+    div.left a#green {
+        color: $cyan;
+    }
+    .left, .right {
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
     }
+    .break-1 {
+        opacity: 0.4;
+    }
+
 }
