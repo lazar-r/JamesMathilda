@@ -28,7 +28,7 @@ li {
 }
 
 .hero {
-    background-image: linear-gradient(rgba(196, 197, 199, 0.096), rgba(142, 143, 145, 0.001)), url(/img/home-1.jpg);
+    background-image: linear-gradient(rgba(196, 197, 199, 0.096), rgba(142, 143, 145, 0.001)), url(https://drive.google.com/drive/folders/1pkA7NSprOj9-jNcyhITJPN5DJn7EeidE);
 
     background-position: center;
     background-repeat: no-repeat;
@@ -390,6 +390,9 @@ i {
     }
     div.contact {
         padding: 5em;
+        .form {
+            margin: 0;
+        }
     }
     div.email.input, #email, #name, #msg, .msg input {
         margin-bottom: 1em;
