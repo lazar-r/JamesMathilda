@@ -244,9 +244,10 @@ i {
     }
     div.about {
         flex-direction: column;
-        height: 120vh;
+        height: 80vh;
         .about-img, .about-text {
             flex-basis: auto;
+            margin-bottom: 4em;
         }
     }
 }
@@ -356,7 +357,7 @@ i {
         justify-content: space-around;
     }
     #city {
-        display: flex;
+        display: none;
         margin-left: 1em;
         padding: 0;
         justify-content: center;
@@ -376,10 +377,12 @@ i {
     }
     div.hero-container {
         padding: 1em;
+        margin: 2em 3em;
     }
     div.about {
-        height: 130vh;
+        height: 120vh;
         justify-content: space-around;
+        padding: 1em 2em;
         div.about-img, .about-text {
             flex-basis: auto;
         }
@@ -388,7 +391,7 @@ i {
         padding: 1em 2em;
     }
     div.contact {
-        padding: 5em;
+        padding: 2em;
         .form {
             margin: 0;
         }
@@ -401,7 +404,15 @@ i {
         background-color: $lightgreen;
         width: 15em;
     }
-
+    div.footer div.left, div.footer div.right {
+        align-items: flex-start;
+        p.copyright {
+            order: 3;
+            font-size: 0.70em;
+            font-weight: 500;
+        }
+    }
+    
  }
 .hero-container {
     display: flex;
@@ -720,16 +731,16 @@ i {
 }
 .footer {
     height: 10vh;
+    margin: 1em;
     display: flex;
     justify-content: space-around;
     align-items: center;
     color: $darkgray1;
     font-size: 0.76em;
     font-weight: 600;
-    a, p {
+
+    a, p{
         padding: 0 1em;
-    }
-    a {
         &:hover {
             cursor: pointer;
         }
@@ -746,5 +757,11 @@ i {
     .break-1 {
         opacity: 0.4;
     }
-
+    .links {
+        display: flex;
+        justify-content: flex-start;
+        a {
+            padding: 0;
+        }
+    }
 }
