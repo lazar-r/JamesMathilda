@@ -244,7 +244,6 @@ i {
     }
     div.about {
         flex-direction: column;
-        height: 80vh;
         .about-img, .about-text {
             flex-basis: auto;
         }
@@ -255,7 +254,6 @@ i {
         white-space: normal;
     }
     div.about {
-        height: 100vh;
         align-items: center;
         justify-content: center;
         padding: 1em 5em;
@@ -341,9 +339,6 @@ i {
     .button img {
         display: none;
     }
-    div.about {
-        height: 100vh;
-    }
     div.about-btn {
         flex-direction: column;
     }
@@ -379,7 +374,6 @@ i {
         margin: 2em 3em;
     }
     div.about {
-        height: 100vh;
         justify-content: space-around;
         padding: 1em 2em;
         div.about-img, .about-text {
