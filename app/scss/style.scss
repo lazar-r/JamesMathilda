@@ -380,7 +380,7 @@ i {
         margin: 2em 3em;
     }
     div.about {
-        height: 120vh;
+        height: 100vh;
         justify-content: space-around;
         padding: 1em 2em;
         div.about-img, .about-text {
@@ -411,8 +411,13 @@ i {
             font-size: 0.70em;
             font-weight: 500;
         }
-    }
-    
+    }  
+ }
+ @media screen and (max-width: 380px)
+ {
+     div.about {
+         height: 120vh;
+     }
  }
 .hero-container {
     display: flex;
@@ -578,8 +583,7 @@ i {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    align-items: flex-start;
-    padding: 1em 15em;
+    align-items: center;
     .head {
         align-self: center;
         text-align: center;
