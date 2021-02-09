@@ -247,7 +247,6 @@ i {
         height: 80vh;
         .about-img, .about-text {
             flex-basis: auto;
-            margin-bottom: 4em;
         }
     }
 }
@@ -413,12 +412,7 @@ i {
         }
     }  
  }
- @media screen and (max-width: 380px)
- {
-     div.about {
-         height: 120vh;
-     }
- }
+
 .hero-container {
     display: flex;
     flex-direction: column;
@@ -573,9 +567,6 @@ i {
                 cursor: pointer;
             } 
         }
-        div.about {
-            height: 100vh;
-        }
     }
 }
 .contact {
@@ -672,9 +663,7 @@ i {
     }
 }
 .about {
-    height: 60vh;
-    padding: 0 10em;
-    padding-bottom: 4em;
+    padding: 4em 10em;
     display: flex;
     justify-content: space-between;
     background-image: linear-gradient(rgba(196, 197, 199, 0.027), rgba(142, 143, 145, 0.001)), url(../img/about-us-background.jpg);
@@ -683,7 +672,6 @@ i {
     background-size: cover;
     .about-img {
         flex-basis: 40%;
-        padding-top: 5em;
         display: flex;
         flex-direction: column;
         justify-content: flex-start;
@@ -700,6 +688,7 @@ i {
     }
     .about-text {
         flex-basis: 60%;
+        padding-top: 4em;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
